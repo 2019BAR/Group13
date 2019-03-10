@@ -1,6 +1,6 @@
 ---
 title: "AS3-2: 股市動態"
-author: "第 13 組 李雯萱"
+author: "第 13 組 "
 date: "`r Sys.time()`"
 output:
   html_document:
