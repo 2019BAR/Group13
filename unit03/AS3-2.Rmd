@@ -19,6 +19,7 @@ options(scipen=20, digits=4, width=90)
 #
 if(!require(pacman)) install.packages("pacman")
 pacman::p_load(dplyr)
+library(ggplot2)
 ```
 <hr>
 
@@ -34,11 +35,11 @@ pacman::p_load(dplyr)
 + `data/CocaColaStock.csv`
 + `data/BoeingStock.csv` 
 ```{r}
-IBM=read.csv("IBMStock.csv")
-GE=read.csv("GEStock.csv")
-PRO=read.csv("ProcterGambleStock.csv")
-CO=read.csv("CocaColaStock.csv")
-BOE=read.csv("BoeingStock.csv")
+IBM=read.csv("data/IBMStock.csv")
+GE=read.csv("data/GEStock.csv")
+PRO=read.csv("data/ProcterGambleStock.csv")
+CO=read.csv("data/CocaColaStock.csv")
+BOE=read.csv("data/BoeingStock.csv")
 ```
 
 
