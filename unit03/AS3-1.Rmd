@@ -1,6 +1,6 @@
 ---
 title: "AS3-1: 數位偵探"
-author: "第 13 組"
+author: "第 13 組 李雯萱"
 date: "`r Sys.time()`"
 output: 
   html_document:
