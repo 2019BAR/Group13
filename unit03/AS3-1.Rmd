@@ -47,7 +47,7 @@ pacman::p_load(dplyr, d3heatmap)
 【1.1】How many rows of data (observations) are in this dataset?
 ```{r}
 #191641
-data=read.csv("/Users/wenxuanlee/Desktop/R files/tony/unit03/data/mvtWeek1.csv")
+data=read.csv("mvtWeek1.csv")
 nrow(data)
 ```
 
@@ -117,19 +117,23 @@ sum(data$LocationDescription=="ALLEY")
 
 ```{r}
 #Month/Day/Year Hour:Minute
-data$Date[1]
+head(data$Date)
 ```
 
 ```{r}
-#
+dateconverted=as.POSIXct(data$Date,format="%m/%d/%y %H:%M")
 ```
 
 ```{r}
-#
+par(cex=0.7)
+hist(dateconverted,"quarter",las=2,freq=T,xlab="")
 ```
 
 ```{r fig.height=2.5, fig.width=8}
-#
+table( format(dateconverted,'%u') )
+table(format(dateconverted,'%m'))
+table(weekday=format(dateconverted,'%u'), month=format(dateconverted,'%m'))
+table(weekday=format(dateconverted,'%u'), hour=format(dateconverted,'%H'))
 ```
 
 
@@ -137,8 +141,7 @@ data$Date[1]
 ```{r}
 #2006-05
 #轉換成日期格式
-dateconverted=as.POSIXct(data$Date, format="%m/%d/%y %H:%M")
-median(dateconverted)
+median(dateconverted,na.rm=T)
 
 ```
 
