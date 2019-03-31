@@ -61,7 +61,7 @@ curve(dnorm(x,mean=200,sd=sqrt(160)), col='red', lwd=2, add=T)
 
 ANS:隨機變數可以協助定義一群數值，當值域的數值過多時，我們可以利用隨機變數來定義，找出對應的觀察值<dr>
 
-■ 隨機變數沒有固定的值，那我們要如何做計算呢？ <dr>
+■ 隨機變數有固定的值，那我們要如何做計算呢？ <dr>
 
 ANS:隨機變數可以去求其分配後，計算其期望值。 <dr>
 
@@ -172,6 +172,7 @@ PROB0
 ■ 將頻寬調整參數設為0.5，算出等待時間落在80到90之間的機率<dr>
 ```{r}
 #0.2827451
+
 DEN1 = density(D, adjust=0.5)
 PDF = approxfun(DEN1$x, DEN1$y, yleft=0, yright=0)
 PROB1 = integrate(PDF,80,90)$value
@@ -252,14 +253,14 @@ i1=seq(0,6-1/6,0.1)
 i2=seq(1/6,6,0.1)
 w=data.frame(i1,i2)
 for(i in 1:59 ){w[i,3]=integrate(PDF,i1[i],i2[i])$value}
-head(w[order(w$V3,decreasing=T),],6)
+head(w[order(w$V3,decreasing=T), ],6)
 
 ```
 
 
 ■ 你的賭金和期望值各是多少？<dr>
 ```{r}
-#賭金為30元，可以賺20.294元
+#賭金為45元，可以賺24.33元
 D=faithful$eruptions
 Adjust=0.5
 Den=density(D,adjust=Adjust)
@@ -270,14 +271,20 @@ ans=sapply(seq_time,function(x){
   pro=integrate(PDF,x,(x+1/6))$value
   -5*(1-pro)+95*(pro)})
 
-do=sort(ans,decreasing =T,i)
+do=sort(ans,decreasing =T)
 sum(do[1])
 sum(do[1:2])
 sum(do[1:3])
 sum(do[1:4])
 sum(do[1:5])
 sum(do[1:6])
+sum(do[1:7])
+sum(do[1:8])
+sum(do[1:9])
+sum(do[1:10])
+
 ```
+
 
 
 
