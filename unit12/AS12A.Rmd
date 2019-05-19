@@ -157,9 +157,9 @@ points(0,0.5,pch=20,cex=1.5,col='red')
 
 <span style="font-size:24px"> `r "\U1F5FF"` : </span>
 What are the definiion of `logit` & `logistic function`? What is the relationship between them?<br>
-1.logit是指一件事情發生的機率，與沒發生的機率所產生的比值(取log)。<br>
-2.logistic function是p(y=1)也就是發生某事的機率。<br>
-3.通常而言logit會呈現對稱的狀況來對應logit function所出現的機率，如P=0.1，相對來說odd比值會很小，
+logit是指一件事情發生的機率，與沒發生的機率所產生的比值(取log)。<br>
+logistic function是p(y=1)也就是發生某事的機率。<br>
+通常而言logit會呈現對稱的狀況來對應logit function所出現的機率，如P=0.1，相對來說odd比值會很小，
 取出來的log值為負；P=0.9，相對來說odd比值較大，取出來的log為正，且彼此相對稱。<br>
 
 
